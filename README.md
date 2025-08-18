@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)  
 [![Platform](https://img.shields.io/badge/platform-Armbian-orange)](https://www.armbian.com/)
 
-Resource-friendly NanoHat OLED and GPIO button control for Armbian.
+Resource-friendly NanoHat OLED and GPIO button control for Armbian.  
 Displays YouTube channel statistics (views, subs, videos) on a small SSD1306 OLED.
 
 ## Acknowledgements
