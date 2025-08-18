@@ -1,7 +1,7 @@
 # NanoHat OLED with YouTube stats
 
 [![Build](https://img.shields.io/badge/build-make-blue)](https://www.gnu.org/software/make/)  
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)  
+[![License](https://img.shields.io/badge/license-Unlicense-green)](LICENSE)  
 [![Platform](https://img.shields.io/badge/platform-Armbian-orange)](https://www.armbian.com/)
 
 Resource-friendly NanoHat OLED and GPIO button control for Armbian.  
