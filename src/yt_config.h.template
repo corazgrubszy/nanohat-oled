@@ -1,0 +1,35 @@
+#pragma once
+
+#include <stddef.h>
+#include <stdint.h>
+
+/*
+ This is a template/README for the generated header.
+ Do NOT put secrets here. The real header is generated to src/yt_config.h
+ by tools/gen_yt_config.py and must be gitignored.
+
+ Generated file provides:
+   - #define YT_XOR_K 0x??
+   - static const uint8_t YT_KEY_OBF[];  // XOR'ed API key bytes
+   - static const size_t  YT_KEY_LEN;
+   - static const uint8_t YT_ID_OBF[];   // XOR'ed channel ID bytes
+   - static const size_t  YT_ID_LEN;
+   - static inline size_t get_yt_api_key(char *dst, size_t cap);
+   - static inline size_t get_yt_channel_id(char *dst, size_t cap);
+
+ Usage in your C code:
+   #include "yt_config.h"
+
+   char api_key[128], chan_id[128];
+   size_t klen = get_yt_api_key(api_key, sizeof api_key);
+   size_t ilen = get_yt_channel_id(chan_id, sizeof chan_id);
+   // ... build request ...
+   secure_wipe(api_key, klen);
+   secure_wipe(chan_id, ilen);
+
+ Security notes:
+   - XOR is only obfuscation (prevents trivial `strings`). It does not prevent
+     extraction from memory or via instrumentation.
+   - Keep src/yt_config.h out of git (gitignore). Optionally store an encrypted
+     backup (e.g., src/yt_config.h.gpg).
+*/
